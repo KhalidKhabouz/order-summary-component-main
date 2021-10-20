@@ -23,6 +23,13 @@ body {
   background-color: white;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /*&__payment-plan {
+
+  }
+
+  &__payment-price {
+    
+  }*/
 }
 
 .card__img {
@@ -38,12 +45,65 @@ body {
   margin: 0;
   font-weight: 900;
   text-align: center;
-  color: #1f2f56;
+  color: #4d41c8;
 }
 
 .card__text {
   font-size: 1rem;
   color: #7280a7;
   text-align: center;
+}
+
+.card__payment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px 0;
+  border-radius: 10px;
+  background-color: #f5f7ff;
+}
+
+.card__link {
+  color: #3829e0;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.card__link:hover {
+  text-decoration: none;
+  opacity: 0.4;
+}
+
+.card__cancel-order {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  color: #7280a7;
+}
+
+.card button {
+  background-color: #3829e0;
+  -webkit-box-shadow: 0 10px 10px 0 #dedbf8, 0 10px 10px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 10px 10px 0 #dedbf8, 0 10px 10px 0 rgba(0, 0, 0, 0.19);
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  margin: 35px 0;
+  padding: 20px 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.card button:hover {
+  opacity: 0.6;
 }
 /*# sourceMappingURL=style.css.map */

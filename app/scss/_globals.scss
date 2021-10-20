@@ -47,4 +47,63 @@ body {
     color: $desaturatedBlue;
     text-align: center;
   }
+
+  &__payment {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px 0;
+    border-radius: 10px;
+    background-color: $veryPaleBlue;
+  }
+
+  /*&__payment-plan {
+
+  }
+
+  &__payment-price {
+    
+  }*/
+
+  &__link {
+    color: $brightBlue;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  &__link:hover {
+    text-decoration: none;
+    //color: $desaturatedBlue;
+    opacity: 0.4;
+  }
+
+  &__cancel-order {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    color: $desaturatedBlue;
+
+  }
+
+}
+
+.card button {
+  background-color: $brightBlue;
+  box-shadow: 0 10px 10px 0 rgba(222,219,248,1), 0 10px 10px 0 rgba(0,0,0,0.19);
+  color:  $white;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  margin: 35px 0;
+  padding: 20px 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.card button:hover {
+  //background-color: $darkBlue;
+  opacity: 0.6;
 }
