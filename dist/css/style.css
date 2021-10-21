@@ -9,7 +9,7 @@ body {
   padding: 0;
   font-family: 'Red Hat Display', sans-serif;
   background: url("../../images/pattern-background-desktop.svg") no-repeat;
-  background-color: #f5f7ff;
+  background-color: #e0e8ff;
   background-size: 100vw auto;
   line-height: 1.5;
 }
@@ -19,10 +19,10 @@ body {
   margin: auto;
   border-radius: 1.25rem;
   margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-top: 6.375rem;
   background-color: white;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: #c6cff6 0px 40px 20px -20px;
+          box-shadow: #c6cff6 0px 40px 20px -20px;
   /*&__payment-plan {
 
   }
@@ -38,32 +38,39 @@ body {
 }
 
 .card__container {
-  padding: 3.125rem;
+  padding: 48px;
+  padding-top: 2.6875rem;
+  padding-bottom: 2.875rem;
 }
 
 .card__title {
   margin: 0;
+  font-size: 28px;
   font-weight: 900;
   text-align: center;
-  color: #4d41c8;
+  color: #1f2f56;
 }
 
 .card__text {
-  font-size: 1rem;
+  font-size: 17px;
   color: #7280a7;
   text-align: center;
+  margin-bottom: 20px;
+  margin-top: 14px;
+  line-height: 26px;
 }
 
 .card__payment {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 25px 0;
+  padding: 23px 24px;
   border-radius: 10px;
   background-color: #f5f7ff;
 }
@@ -81,6 +88,8 @@ body {
 }
 
 .card__cancel-order {
+  font-size: 15px;
+  font-weight: 900;
   display: block;
   text-decoration: none;
   text-align: center;
@@ -88,22 +97,46 @@ body {
   color: #7280a7;
 }
 
-.card button {
+.card__cancel-order:hover {
+  color: #1f2f56;
+}
+
+.card-button {
   background-color: #3829e0;
-  -webkit-box-shadow: 0 10px 10px 0 #dedbf8, 0 10px 10px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 10px 10px 0 #dedbf8, 0 10px 10px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0px 20px 20px 0px #dedbf8;
+          box-shadow: 0px 20px 20px 0px #dedbf8;
+  display: inline-block;
   color: white;
   cursor: pointer;
   border: none;
+  text-align: center;
+  text-decoration: none;
   border-radius: 10px;
   width: 100%;
-  margin: 35px 0;
-  padding: 20px 0;
-  font-size: 14px;
+  margin: 32px 0;
+  margin-bottom: 31px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  font-size: 16px;
   font-weight: 700;
 }
 
-.card button:hover {
+.card-button:hover {
   opacity: 0.6;
+}
+
+.card h2 {
+  font-size: 16.5px;
+  font-weight: 900;
+  color: #1f2f56;
+  margin: 0;
+  margin-bottom: 2px;
+}
+
+.card__payment p {
+  margin: 0;
+  font-size: 17px;
+  color: #7280a7;
+  font-stretch: ultra-expanded;
 }
 /*# sourceMappingURL=style.css.map */
