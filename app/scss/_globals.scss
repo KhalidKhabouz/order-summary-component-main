@@ -1,101 +1,104 @@
-htlm {
-  font-size: 100%;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
+  font-family: 'Red Hat Display', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Red Hat Display', sans-serif;
-  background: url('../../images/pattern-background-desktop.svg') no-repeat;
-  background-color: $paleBlue;
-  background-size: 100vw auto;
   line-height: 1.5;
 }
 
+.container {
+  background: url('../../images/pattern-background-desktop.svg') no-repeat;
+  background-color: $paleBlue;
+  background-size: auto;
+  padding-bottom: 6.3125rem;
+  padding-top: 6.375rem; // 102px
+}
+
 .card {
-  width: 28.125rem;
-  //width: 25.4375rem;
+  width: 28.125rem; // 450px
   margin: auto;
-  //height: 600px;
-  border-radius: 1.25rem;
-  margin-bottom: 2rem;
-  margin-top: 6.375rem; //102px
+  border-radius: 1.25rem; // 20px
   background-color: $white;
-  //box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.2);
-  //box-shadow: 0px 20px 20px 0px rgba(222,219,248,1);
-  //box-shadow: rgba(222,219,248,1) 0px 10px 10px -20px;
   box-shadow: rgba(198, 207, 246, 1) 0px 40px 20px -20px;
- // box-shadow: rgba(56, 41, 224, 0.4) 0px 50px 30px -20px;
 
   &__img {
-    width: inherit;
-    //height: 200px;
+    width: 100%;
+    display: block;
     border-radius: 1.25rem 1.25rem 0 0;
   }
 
   &__container {
-    padding: 48px;
+    padding: 3rem; // 48px
     padding-top: 2.6875rem; //43px
-    padding-bottom: 2.875rem;
-    //background-color: blue;
+    padding-bottom: 2.875rem; // 46px
   }
 
   &__title {
-    margin: 0;
-    font-size: 28px;
+    font-size: 1.75em; // 28px;
     font-weight: 900;
     text-align: center;
     color: $darkBlue;
   }
 
   &__text {
-    //padding: 0 3rem;
-    font-size: 17px;
-    color: $desaturatedBlue;
-    text-align: center;
     margin-bottom: 20px;
     margin-top: 14px;
+    text-align: center;
+    font-size: 17px;
     line-height: 26px;
+    color: $desaturatedBlue;
   }
 
   &__payment {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 23px 24px;
+    padding: 24px;
     border-radius: 10px;
     background-color: $veryPaleBlue;
   }
 
-  /*&__payment-plan {
-
+  &__plan {
+    font-size: 16.5px; // 1.03125em;
+    font-weight: 900;
+    color: $darkBlue;
+  }
+  
+  &__payment p {
+    font-size: 17px;
+    color: $desaturatedBlue;
   }
 
-  &__payment-price {
-    
-  }*/
-
+  &__payment-flex {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+  
   &__link {
-    color: $brightBlue;
     cursor: pointer;
     font-weight: 700;
     font-size: 15px;
+    color: $brightBlue;
   }
 
   &__link:hover {
     text-decoration: none;
-    //color: $desaturatedBlue;
     opacity: 0.4;
   }
 
   &__cancel-order {
-    font-size: 15px;
-    font-weight: 900;
     display: block;
     text-decoration: none;
     text-align: center;
     cursor: pointer;
+    font-size: 15px;
+    font-weight: 900;
     color: $desaturatedBlue;
   }
 
@@ -103,46 +106,87 @@ body {
     color: $darkBlue;
   }
 
+  &__button {
+    background-color: $brightBlue;
+    box-shadow: 0px 20px 20px 0px rgba(222,219,248,1);
+    display: inline-block;
+    color:  $white;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    width: 100%;
+    margin: 32px 0 31px 0;
+    padding: 13px 0;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &__button:hover {
+    opacity: 0.7;
+  }
 }
 
-.card-button {
-  background-color: $brightBlue;
-  // box-shadow: 0px 25px 20px 0px rgba(222,219,248,1), 0 10px 10px 0 rgba(0,0,0,0.19);
-  box-shadow: 0px 20px 20px 0px rgba(222,219,248,1);
-display: inline-block;
-  color:  $white;
-  cursor: pointer;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 10px;
-  width: 100%;
-  margin: 32px 0;
-  margin-bottom: 31px;
-  padding-top: 13px;
-  padding-bottom: 13px ;
-  font-size: 16px;
-  font-weight: 700;
-}
+.attribution { font-size: 11px; text-align: center; padding: 3px;}
+.attribution a { color: hsl(228, 45%, 44%); }
 
-.card-button:hover {
-  //background-color: $darkBlue;
-  opacity: 0.6;
-}
+// Responsive style for mobile 375px max-with
+@media only screen and (max-width: 375px) {
 
-.card h2 {
-  font-size: 16.5px;
-  font-weight: 900;
-  color: $darkBlue;
-  margin: 0;
-  margin-bottom: 2px;
+  .container {
+    padding: 4.4375rem 0;
+  }
 
-}
+  .card {
+    width: 327px;
+    margin: auto;
+    margin-top: 71px;
 
-.card__payment p {
-  margin: 0;
-  font-size: 17px;
-    color: $desaturatedBlue;
-    font-stretch: ultra-expanded;
-    //letter-spacing: 0.3px;
+    &__container {
+      padding: 1.5rem;
+      padding-bottom: 1.875rem;
+      padding-top: 1.875rem;
+    }
+
+    &__title {
+      font-size: 22px;
+    }
+
+    &__text {
+      font-size: 15px;
+      line-height: 25px;
+      padding-top: 1px;
+      padding-right: 10px;
+      padding-bottom: 3px;
+      padding-left: 10px;
+    }
+
+    &__payment {
+      padding: 17px;
+      padding-bottom: 16px;
+    }
+
+    &__plan {
+      margin-top: 1px;
+      font-size: 14.5px;
+      margin-bottom: 0px;
+    }
+    &__link {
+      font-size: 13px;
+    }
+
+    &__payment p {
+      font-size: 15px;
+    }
+
+    &__button {
+      margin-top: 24px;
+      margin-bottom: 23px;
+      font-size: 15px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    
+    }
+  }
 }

@@ -1,63 +1,60 @@
-htlm {
-  font-size: 100%;
+* {
+  margin: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 body {
+  font-family: 'Red Hat Display', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Red Hat Display', sans-serif;
+  line-height: 1.5;
+}
+
+.container {
   background: url("../../images/pattern-background-desktop.svg") no-repeat;
   background-color: #e0e8ff;
-  background-size: 100vw auto;
-  line-height: 1.5;
+  background-size: auto;
+  padding-bottom: 6.3125rem;
+  padding-top: 6.375rem;
 }
 
 .card {
   width: 28.125rem;
   margin: auto;
   border-radius: 1.25rem;
-  margin-bottom: 2rem;
-  margin-top: 6.375rem;
   background-color: white;
   -webkit-box-shadow: #c6cff6 0px 40px 20px -20px;
           box-shadow: #c6cff6 0px 40px 20px -20px;
-  /*&__payment-plan {
-
-  }
-
-  &__payment-price {
-    
-  }*/
 }
 
 .card__img {
-  width: inherit;
+  width: 100%;
+  display: block;
   border-radius: 1.25rem 1.25rem 0 0;
 }
 
 .card__container {
-  padding: 48px;
+  padding: 3rem;
   padding-top: 2.6875rem;
   padding-bottom: 2.875rem;
 }
 
 .card__title {
-  margin: 0;
-  font-size: 28px;
+  font-size: 1.75em;
   font-weight: 900;
   text-align: center;
   color: #1f2f56;
 }
 
 .card__text {
-  font-size: 17px;
-  color: #7280a7;
-  text-align: center;
   margin-bottom: 20px;
   margin-top: 14px;
+  text-align: center;
+  font-size: 17px;
   line-height: 26px;
+  color: #7280a7;
 }
 
 .card__payment {
@@ -70,16 +67,38 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 23px 24px;
+  padding: 24px;
   border-radius: 10px;
   background-color: #f5f7ff;
 }
 
+.card__plan {
+  font-size: 16.5px;
+  font-weight: 900;
+  color: #1f2f56;
+}
+
+.card__payment p {
+  font-size: 17px;
+  color: #7280a7;
+}
+
+.card__payment-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
 .card__link {
-  color: #3829e0;
   cursor: pointer;
   font-weight: 700;
   font-size: 15px;
+  color: #3829e0;
 }
 
 .card__link:hover {
@@ -88,12 +107,12 @@ body {
 }
 
 .card__cancel-order {
-  font-size: 15px;
-  font-weight: 900;
   display: block;
   text-decoration: none;
   text-align: center;
   cursor: pointer;
+  font-size: 15px;
+  font-weight: 900;
   color: #7280a7;
 }
 
@@ -101,7 +120,7 @@ body {
   color: #1f2f56;
 }
 
-.card-button {
+.card__button {
   background-color: #3829e0;
   -webkit-box-shadow: 0px 20px 20px 0px #dedbf8;
           box-shadow: 0px 20px 20px 0px #dedbf8;
@@ -113,30 +132,72 @@ body {
   text-decoration: none;
   border-radius: 10px;
   width: 100%;
-  margin: 32px 0;
-  margin-bottom: 31px;
-  padding-top: 13px;
-  padding-bottom: 13px;
+  margin: 32px 0 31px 0;
+  padding: 13px 0;
   font-size: 16px;
   font-weight: 700;
 }
 
-.card-button:hover {
-  opacity: 0.6;
+.card__button:hover {
+  opacity: 0.7;
 }
 
-.card h2 {
-  font-size: 16.5px;
-  font-weight: 900;
-  color: #1f2f56;
-  margin: 0;
-  margin-bottom: 2px;
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 3px;
 }
 
-.card__payment p {
-  margin: 0;
-  font-size: 17px;
-  color: #7280a7;
-  font-stretch: ultra-expanded;
+.attribution a {
+  color: #3e52a3;
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    padding: 4.4375rem 0;
+  }
+  .card {
+    width: 327px;
+    margin: auto;
+    margin-top: 71px;
+  }
+  .card__container {
+    padding: 1.5rem;
+    padding-bottom: 1.875rem;
+    padding-top: 1.875rem;
+  }
+  .card__title {
+    font-size: 22px;
+  }
+  .card__text {
+    font-size: 15px;
+    line-height: 25px;
+    padding-top: 1px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+  }
+  .card__payment {
+    padding: 17px;
+    padding-bottom: 16px;
+  }
+  .card__plan {
+    margin-top: 1px;
+    font-size: 14.5px;
+    margin-bottom: 0px;
+  }
+  .card__link {
+    font-size: 13px;
+  }
+  .card__payment p {
+    font-size: 15px;
+  }
+  .card__button {
+    margin-top: 24px;
+    margin-bottom: 23px;
+    font-size: 15px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
